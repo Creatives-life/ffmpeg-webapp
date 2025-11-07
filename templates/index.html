@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FFmpeg Web Processor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>🎬 FFmpeg Web Processor</h1>
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <label>Input File (Video or Audio):</label>
+    <input type="file" name="input_file" accept="video/*,audio/*" required><br><br>
+
+    <label>Text Overlay:</label>
+    <input type="text" name="text_overlay" placeholder="@TowsifAktar"><br>
+    <input type="checkbox" name="enable_text" checked> Enable Text Overlay<br><br>
+
+    <h3>Metadata (Optional)</h3>
+    <input type="checkbox" name="enable_metadata" checked> Enable Metadata<br><br>
+
+    <input type="text" name="title" placeholder="Title">
+    <input type="text" name="artist" placeholder="Artist">
+    <input type="text" name="album" placeholder="Album"><br>
+    <input type="text" name="genre" placeholder="Genre">
+    <input type="text" name="year" placeholder="Year">
+    <input type="text" name="comment" placeholder="Comment"><br>
+    <input type="text" name="copyright" placeholder="Copyright"><br><br>
+
+    <button type="submit">Process</button>
+  </form>
+</body>
+</html>
